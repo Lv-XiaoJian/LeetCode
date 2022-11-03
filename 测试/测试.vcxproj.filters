@@ -24,6 +24,12 @@
     <ClCompile Include="Writer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BaoShuGame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FindeDuplication.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Test.h">
@@ -33,6 +39,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Writer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BaoShuGame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FindeDuplication.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

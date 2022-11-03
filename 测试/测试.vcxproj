@@ -64,11 +64,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaoShuGame.cpp" />
+    <ClCompile Include="FindeDuplication.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="PermSort.cpp" />
     <ClCompile Include="Writer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaoShuGame.h" />
+    <ClInclude Include="FindeDuplication.h" />
     <ClInclude Include="Test.h" />
     <ClInclude Include="PermSort.h" />
     <ClInclude Include="Writer.h" />

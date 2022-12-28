@@ -118,6 +118,43 @@ void CTest::Test_5_2()
 	m_pFinder.FindReContainsNoEdit(a, sizeof(a) / sizeof(a[0]));
 	return;
 }
+
+template<typename T>
+void CTest::Merge_Sort(T* pArrage,T* pArrageNew,int nFirst, int nEnd)
+{
+	if (nFirst >= nEnd)
+		return;
+	int nSize = nEnd - nFirst;
+	int nMid = (nSize >> 1) + nFirst;
+	int nStart = nFirst,nOver = nMid;
+	int nStart_2 = nMid + 1, nOver_2 = nEnd;
+	Merge_Sort(pArrage, pArrageNew, nStart, nOver);
+	Merge_Sort(pArrage, pArrageNew, nStart_2, nOver_2);
+	int k = nFirst;
+	while (nStart <= nOver && nStart_2 <= nOver_2)
+		pArrageNew[k++] = pArrage[nStart] < pArrage[nStart_2] ? pArrage[nStart++] : pArrage[nStart_2++];
+	while (nStart <= nOver)
+		pArrageNew[k++] = pArrage[nStart++];
+	while (nStart_2 <= nOver_2)
+		pArrageNew[k++] = pArrage[nStart_2++];
+	for (k = nFirst; k <= nEnd; k++)
+		pArrage[k] = pArrageNew[k];
+}
+void CTest::Test_6()
+{
+	int test[] = { 7,6,5,4,3,2,17,16,13,1 };
+	int nSize = sizeof(test) / sizeof(test[0]);
+	int* pTestFinish = new int[nSize]();
+	Merge_Sort(test, pTestFinish, 0, nSize - 1);
+
+	cout << "²¢¹éÅÅÐòºó:" << endl;
+	for(int i = 0; i < nSize;i++)
+		cout << pTestFinish[i] << endl;
+	if (pTestFinish != NULL)
+		delete[] pTestFinish;
+	return;
+}
+
 int main()
 {
   	CTest go;
@@ -126,6 +163,7 @@ int main()
 //	go.Test_3();
 //	go.Test_5_1();
 //	go.Test_5_2();
+	go.Test_6();
 	system("pause");
 	return EXIT_SUCCESS;
 }

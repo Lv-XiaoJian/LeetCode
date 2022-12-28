@@ -33,4 +33,9 @@ public:
 		void Test_5_1();
 		void Test_5_2();
 
+		void Test_6();
+		template<typename T>
+		void Merge_Sort(T* pArrage,T* pArrageNew, int nFirst, int nEnd); //πÈ≤¢≈≈–Ú µ›πÈ∞Ê
+		
+
 };
